@@ -1,0 +1,25 @@
+From 9b64c5ddab1b6f57a4ef002961db354a4ab4d3e4 Mon Sep 17 00:00:00 2001
+From: shucheng <shucheng@bd-apaas.com>
+Date: Mon, 25 Dec 2023 19:07:18 +0800
+Subject: [PATCH] loong64
+
+---
+ scripts/debuerreotype-init | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/debuerreotype-init b/scripts/debuerreotype-init
+index 9aa86ca..e50bb25 100755
+--- a/scripts/debuerreotype-init
++++ b/scripts/debuerreotype-init
+@@ -123,7 +123,7 @@ fi
+ 
+ [ -n "$noMergedUsr" ] && debootstrapArgs+=( --no-merged-usr ) || debootstrapArgs+=( --merged-usr )
+ [ -z "$keyring" ] || debootstrapArgs+=( --keyring="$keyring" )
+-[ -z "$arch" ] || debootstrapArgs+=( --arch="$arch" )
++[ -z "$arch" ] || debootstrapArgs+=( --arch="$arch" --extra-suites=unreleased )
+ [ -z "$include" ] || debootstrapArgs+=( --include="$include" )
+ [ -z "$exclude" ] || debootstrapArgs+=( --exclude="$exclude" )
+ 
+-- 
+2.39.2
+
